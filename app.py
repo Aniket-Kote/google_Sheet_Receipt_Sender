@@ -17,5 +17,10 @@ def new_entry():
     process_new_entry(data)
     return jsonify({"status": "received", "data": data}), 200
 
+# New GET endpoint for testing
+@app.route('/test', methods=['GET'])
+def test():
+    return jsonify({"status": "success", "message": "Test endpoint is working"}), 200
+
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
