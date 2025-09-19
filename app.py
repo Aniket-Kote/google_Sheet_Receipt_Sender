@@ -8,6 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 def process_new_entry(entry):
+    print(type(entry))
     print("✅ New row detected:", entry)
     # 👉 Your logic here
 
